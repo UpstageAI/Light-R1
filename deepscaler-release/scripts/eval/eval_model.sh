@@ -70,7 +70,8 @@ for DATA_TYPE in "${DATATYPES[@]}"; do
         rollout.n=1 \
         +actor_rollout_ref.rollout.enable_chunked_prefill=False \
         +actor.optim.lr=1e-3 \
-        +data.skip_format_reward=True
+        +data.skip_format_reward=True \
+        +model.trust_remote_code=True 
 
     python light_r1_postprocess.py \
         --model_path=${MODEL_PATH} \
