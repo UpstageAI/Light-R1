@@ -61,7 +61,7 @@ for DATA_TYPE in "${DATATYPES[@]}"; do
         rollout.top_p=0.95 \
         rollout.max_model_len=8192 \
         rollout.gpu_memory_utilization=0.8 \
-        rollout.tensor_model_parallel_size=1 \
+        rollout.tensor_model_parallel_size=2 \
         actor.strategy=fsdp \
         actor.ulysses_sequence_parallel_size=1 \
         actor.fsdp_config.fsdp_size=-1 \
